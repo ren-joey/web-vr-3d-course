@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!--  Todo: Change Title Here    -->
+    <title>My WebVR ch1</title>
+
+    <!--  Todo: Change Discription Here    -->
+    <meta name="description" content="">
+
+    <!--  Todo: Add Aframe Src Script    -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+</head>
+
+<body>
+    <a-scene background="color: #1d544e;">
+
+        <!-- 預計會使用到的資源 -->
+        <a-assets>
+            <img id="street" src="./assets/scene-1.jpg" alt="">
+            <img id="greenMan" src="./assets/scene-2.jpg" alt="">
+            <video id="ayutthaya"
+                preload
+                autoplay
+                loop="true"
+                src="./assets/Ayutthaya.mp4"
+            />
+        </a-assets>
+
+        <!-- 靜態天空 (以球體呈現) -->
+        <!-- <a-sky color="red"></a-sky> -->
+        <!-- <a-sky src="#street"></a-sky> -->
+        <!-- <a-sky src="#greenMan"></a-sky> -->
+        <!-- <a-sky src="#ayutthaya"></a-sky> -->
+
+        <!-- 動態天空 (以球體呈現) -->
+        <a-videosphere src="#ayutthaya" />
+    </a-scene>
+
+    <!-- 外掛的預設範例 -->
+    <!-- <a-scene background="color: #FAFAFA">
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+    </a-scene> -->
+    
+</body>
+
+</html>
